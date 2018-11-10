@@ -5,7 +5,10 @@ interface ArrayCreator<R>
     R apply(int size);
 }
 
-
+/**
+ *
+ * @param <T>
+ */
 public class List<T>
 {
 
