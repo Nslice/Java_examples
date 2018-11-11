@@ -1,5 +1,6 @@
 package myList;
 
+@FunctionalInterface
 interface ArrayCreator<R>
 {
     R apply(int size);
@@ -12,7 +13,7 @@ interface ArrayCreator<R>
 public class List<T>
 {
 
-    int size = 0;
+    private int size = 0;
     private Node head = null;
     private Node tail = null;
 
@@ -37,6 +38,12 @@ public class List<T>
     {
         for (T obj : args)
             this.push_back(obj);
+    }
+
+
+    public int size()
+    {
+        return size;
     }
 
 

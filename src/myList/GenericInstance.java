@@ -7,11 +7,12 @@ package myList;
  * как в Java сделать что-то похожее на
  *      1) T[] ar = new T[5];
  *      2) ar[0] = new T();
- * второе как С++ не получится сделать, потому что
+ * Второе как С++ не получится сделать, потому что
  * невозможно предусмотреть интерфейсы для всех конструкторов.
  */
 
 
+@FunctionalInterface
 interface Creator<R, T>
 {
     R apply(T n);
@@ -64,7 +65,7 @@ public class GenericInstance
     {
         List<String> list = new List<>();
         list.show();
-        System.out.println(list.size);
+        System.out.println(list.size());
         list.push_back("Tool", "Pantera", "Lamb of God");
         list.show();
 
