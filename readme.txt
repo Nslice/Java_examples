@@ -1,3 +1,3 @@
 
 myList - new T[]
-Native - JNI native method example
+nativedemo - JNI native method example
